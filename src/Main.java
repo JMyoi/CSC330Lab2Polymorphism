@@ -1,26 +1,24 @@
 public class Main{
 
     public static void main(String[] args){
-        //part 1
-        System.out.println("Part 1: ");
         Vehicle V = new Vehicle();
         Vehicle C = new Car("Porche", 2000);
         Vehicle M = new Motorcycle("Suzuki", 2023);
+        Vehicle B = new Bicycle("Target", 2010);
         V.start();
         C.start();
         M.start();
 
-        System.out.println("Part 2: ");
 
-        Vehicle VehicleArray[] = {V, C, M};
-
+        Vehicle VehicleArray[] = {V, C, M, B};
+        System.out.println("starting all vehicles in array: ");
         for(int i = 0; i<VehicleArray.length; i++){
             VehicleArray[i].start();
         }
-        for(int i = 0; i<VehicleArray.length; i++){
+        System.out.println("Printing all vehicle info: ");
+        for(int i = 0; i<VehicleArray.length; i++) {
             printVehicleInfo(VehicleArray[i]);
         }
-
     }
 
     public static void printVehicleInfo(Vehicle vehicle){
